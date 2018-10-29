@@ -25,3 +25,4 @@ curl -o ~/enable-HiDPI.sh https://raw.githubusercontent.com/syscl/Enable-HiDPI-O
 
 - 重启后发现并没有生效（笑，其实这个脚本不是很好用）
 
+fix...
