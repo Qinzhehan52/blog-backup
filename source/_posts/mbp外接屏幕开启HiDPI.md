@@ -39,7 +39,7 @@
 - OS X 10.11及以上
 
   ```bash
-  DIR=/System/Library/Displays/Contents/Resources/Overrides</code>
+  DIR=/System/Library/Displays/Contents/Resources/Overrides
   ```
 
 - OS X 10.10及以下
@@ -60,4 +60,4 @@
 
  [下载RDM](http://avi.alkalay.net/software/RDM/)
 
- {% asset_img RDM-screenshot.jpg This is an example image %}
+ {% asset_img RDM-screenshot.jpg%}
