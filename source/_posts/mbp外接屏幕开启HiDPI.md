@@ -4,31 +4,29 @@
 
 ### 查看SIP状态
 
-    在终端中输入csrutil status，就可以看到是enabled还是disabled。
+>在终端中输入csrutil status，就可以看到是enabled还是disabled。
 
 ### 关闭SIP
 
-    - 重启MAC，按住cmd+R直到屏幕上出现苹果的标志和进度条，进入Recovery模式；
-    
-    - 在屏幕最上方的工具栏找到实用工具（左数第3个），打开终端，输入：csrutil disable；
-    
-    - 关掉终端，重启mac；
-    - 重启以后可以在终端中查看状态确认。
+> - 重启MAC，按住cmd+R直到屏幕上出现苹果的标志和进度条，进入Recovery模式；
+> - 在屏幕最上方的工具栏找到实用工具（左数第3个），打开终端，输入：csrutil disable；
+> - 关掉终端，重启mac；
+> - 重启以后可以在终端中查看状态确认。
 
 ### 开启SIP
 
-    与关闭的步骤类似，只是在S2中输入csrutil enable即可。[转自简书 Mac开启关闭SIP（系统完整性保护）](https://www.jianshu.com/p/fe78d2036192)
+> 与关闭的步骤类似，只是在S2中输入csrutil enable即可。[转自简书 Mac开启关闭SIP（系统完整性保护）](https://www.jianshu.com/p/fe78d2036192)
 
 ## 2. 获得显示器的 VendorID 和 ProductID （制造商ID 和 产品ID），在终端运行：
 
-  ```bash
-  > ioreg -lw0 | grep IODisplayPrefsKey | grep -o '/[^/]\+"$'
-  
-  /AppleBacklightDisplay-610-a034"
-  /AppleDisplay-30ae-61a4"
-  ```
+```bash
+> ioreg -lw0 | grep IODisplayPrefsKey | grep -o '/[^/]\+"$'
 
-    其中第一行610代表的是mac内置显示器，第二行即我们的外接显示器，VendorID=30ae，ProductID=61a4
+/AppleBacklightDisplay-610-a034"
+/AppleDisplay-30ae-61a4"
+```
+
+>其中第一行610代表的是mac内置显示器，第二行即我们的外接显示器，VendorID=30ae，ProductID=61a4
 
 ## 3. 生成我们需要的配置文件
 
@@ -48,7 +46,7 @@
   DIR=/System/Library/Displays/Overrides
   ```
 
-- 把 ${VID} 和 ${PID} 替换成上面获得的VendorID和ProductID
+- 把 VID 和 PID 替换成上面获得的VendorID和ProductID
 
   ```bash
   CONF=${DIR}/DisplayVendorID-${VID}/DisplayProductID-${PID}
@@ -60,4 +58,4 @@
 
  [下载RDM](http://avi.alkalay.net/software/RDM/)
 
- {% asset_img RDM-screenshot.jpg%}
+
