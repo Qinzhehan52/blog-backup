@@ -1,28 +1,63 @@
 # mbp 外接显示器开启HiDPI
 
-- 首先，下载一个脚本
+## 1. 首先，打开系统分区权限：
 
-```bash
-curl -o ~/enable-HiDPI.sh https://raw.githubusercontent.com/syscl/Enable-HiDPI-OSX/master/enable-HiDPI.sh
+### 查看SIP状态
 
-> chmod +x ~/enable-HiDPI.sh
+    在终端中输入csrutil status，就可以看到是enabled还是disabled。
 
-# 回车
+### 关闭SIP
 
-> ~/enable-HiDPI.sh
+    - 重启MAC，按住cmd+R直到屏幕上出现苹果的标志和进度条，进入Recovery模式；
+    
+    - 在屏幕最上方的工具栏找到实用工具（左数第3个），打开终端，输入：csrutil disable；
+    
+    - 关掉终端，重启mac；
+    - 重启以后可以在终端中查看状态确认。
 
-# 选择要调整的显示器
-#开盖时运行脚本 第二个是外接显示器的信息，盒盖情况下就只有外接显示器的信息
+### 开启SIP
 
-# 回车，然后会提示你输入分辨率。例:我需要它渲染3440X1440的HiDPI，就直接输入
+    与关闭的步骤类似，只是在S2中输入csrutil enable即可。[转自简书 Mac开启关闭SIP（系统完整性保护）](https://www.jianshu.com/p/fe78d2036192)
 
-> 5880X2880        //希望渲染的实际分辨率的两倍
+## 2. 获得显示器的 VendorID 和 ProductID （制造商ID 和 产品ID），在终端运行：
 
-# 回车再输入
+  ```bash
+  > ioreg -lw0 | grep IODisplayPrefsKey | grep -o '/[^/]\+"$'
+  
+  /AppleBacklightDisplay-610-a034"
+  /AppleDisplay-30ae-61a4"
+  ```
 
-> 3440X1440        //希望渲染的实际分辨率
-```
+    其中第一行610代表的是mac内置显示器，第二行即我们的外接显示器，VendorID=30ae，ProductID=61a4
 
-- 重启后发现并没有生效（笑，其实这个脚本不是很好用）
+## 3. 生成我们需要的配置文件
 
-fix...
+   使用该网页生成器填写所需信息，生成配置并下载[HiDPI配置生成器](https://comsysto.github.io/Display-Override-PropertyList-File-Parser-and-Generator-with-HiDPI-Support-For-Scaled-Resolutions/)
+
+## 4. 复制配置到系统目录
+
+- OS X 10.11及以上
+
+  ```bash
+  DIR=/System/Library/Displays/Contents/Resources/Overrides</code>
+  ```
+
+- OS X 10.10及以下
+
+  ```bash
+  DIR=/System/Library/Displays/Overrides
+  ```
+
+- 把 ${VID} 和 ${PID} 替换成上面获得的VendorID和ProductID
+
+  ```bash
+  CONF=${DIR}/DisplayVendorID-${VID}/DisplayProductID-${PID}
+  sudo mkdir -p ${DIR}
+  sudo cp 配置文件 ${CONF}
+  ```
+
+## 5.重启并使用RDM调整分辨率
+
+ [下载RDM](http://avi.alkalay.net/software/RDM/)
+
+ {% asset_img RDM-screenshot.jpg This is an example image %}
