@@ -50,11 +50,17 @@
 
   ```bash
   CONF=${DIR}/DisplayVendorID-${VID}/DisplayProductID-${PID}
-  sudo mkdir -p ${DIR}
+  sudo mkdir -p ${DIR}/DisplayVendorID-${VID}
   sudo cp 配置文件 ${CONF}
   ```
 
-## 5.重启并使用RDM调整分辨率
+## 5. 打开系统HIDPI设置
+
+```bash
+sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool YES
+```
+
+## 6. 重启并使用RDM调整分辨率
 
  [下载RDM](http://avi.alkalay.net/software/RDM/)
 
