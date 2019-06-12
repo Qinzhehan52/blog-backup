@@ -19,11 +19,11 @@ tags:
 
 - 用Visual Studio 2019编译时需要设置下项目重定向，打开OpenConsole.sln
 
-![设置项目重定向](/images/QQ20190525230101.jpg)
+![设置项目重定向](https://github.com/Qinzhehan52/blog-backup/blob/master/source/images/QQ20190525230101.jpg?raw=true)
 
 - 设置编译选项
 
-![设置编译选项](/images/QQ20190525230409.jpg)
+![设置编译选项](https://github.com/Qinzhehan52/blog-backup/blob/master/source//images/QQ20190525230409.jpg?raw=true)
 
 ### 报错
 
@@ -33,4 +33,4 @@ tags:
 
 ## 成功效果预览
 
-![成功效果预览](/images/QQ20190525231337.jpg)
+![成功效果预览](https://github.com/Qinzhehan52/blog-backup/blob/master/source/images/QQ20190525231337.jpg?raw=true)
