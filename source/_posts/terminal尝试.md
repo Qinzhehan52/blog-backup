@@ -13,6 +13,8 @@ tags:
 
 - clone 代码到本地 https://github.com/microsoft/terminal.git
 
+<!-- more -->
+
 ## 开始编译
 
 - 用 Visual Studio 2019打开 terminal 本地 Repo, 自动弹出了需要安装的依赖项，下载安装，需要比较长时间的等待

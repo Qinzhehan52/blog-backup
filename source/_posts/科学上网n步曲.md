@@ -15,6 +15,9 @@ tags:
 ```bash
 $ ss-fly/ss-fly.sh -ssr
 ```
+
+<!-- more -->
+
 3. 按照提示输入所需参数即可，完成后终端显示内容如下
 ```
 Congratulations, ShadowsocksR server install completed!
