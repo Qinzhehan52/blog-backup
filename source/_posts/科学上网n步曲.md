@@ -10,8 +10,7 @@ tags:
 **访问需要配置host** `104.27.133.214 www.flyzy2005.com`
 
 1. 下载一键安装脚本 `git clone -b master https://github.com/flyzy2005/ss-fly`
-2. 运行安装脚本	
-
+2. 运行安装脚本	 *ubuntu系统目前默认shell是`dash`,注意切换*
 ```bash
 $ ss-fly/ss-fly.sh -ssr
 ```
