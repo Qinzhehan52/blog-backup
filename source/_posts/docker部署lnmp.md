@@ -2,6 +2,10 @@
 title: docker 部署 LNMP
 date: 2018-10-29 14:02:50
 tags:
+  - docker
+  - php
+categories:
+  - docker
 ---
 # docker 部署 LNMP
 

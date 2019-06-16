@@ -3,6 +3,8 @@ layout: windows
 title: terminal尝试
 date: 2019-05-25 18:53:05
 tags:
+categories:
+    - 软件使用
 ---
 
 ## 前置工作（环境搭建）

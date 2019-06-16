@@ -2,6 +2,11 @@
 title: 科学上网n步曲
 date: 2019-06-12 14:02:50
 tags:
+  - shadowsocks
+  - shadowsocksr
+  - 科学上网
+categories:
+  - 软件使用
 ---
 ## 一. shadowsockr (socks5代理) 搭建
 参考博客[一键脚本搭建SS/搭建SSR服务并开启BBR加速
