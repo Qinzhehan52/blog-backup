@@ -1,7 +1,9 @@
 ---
 title: cmux 多协议服务失败debug记录
 date: 2019-06-16 11:26:27
-tags: golang cmux
+tags:  
+    - golang 
+    - cmux
 ---
 ## cmux 是什么
 > cmux is a generic Go library to multiplex connections based on their payload. Using cmux, you can serve gRPC, SSH, HTTPS, HTTP, Go RPC, and pretty much any other protocol on the same TCP listener.
