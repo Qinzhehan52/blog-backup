@@ -76,3 +76,4 @@ sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutio
  [下载RDM](http://avi.alkalay.net/software/RDM/)
 
 
+fix...
