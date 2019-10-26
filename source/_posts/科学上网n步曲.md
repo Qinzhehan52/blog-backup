@@ -120,12 +120,12 @@ cp /usr/local/etc/proxychains.conf ~/.proxychains/proxychains.conf
 echo 'socks5  127.0.0.1 1086' >> ~/.proxychains/proxychains.conf
 ```
 
-**NOTICE: go get操作使用`proxychains`会报错**
+**NOTICE: go get操作使用`proxychains`会报错**
 
 #### 长期使用
 
 ## shadowsocksr + proxychains + polipo 解决方案
-这套方案的好处是具备 http 和 socks5 两套代理，基本可以应对各种情况下的需求，尤其是本地的 golang 开发环境比较特殊，不适合安装`cow`
+这套方案的好处是具备 http 和 socks5 两套代理，基本可以应对各种情况下的需求，尤其是本地的 golang 开发环境比较特殊，不适合安装`cow`
 
 ### 几条方便科学上网的alias
 
@@ -135,3 +135,17 @@ alias unfuckgfw="unset http_proxy https_proxy && echo '> Welcome inside ;)'"
 alias myip="curl cip.cc"
 alias fq="proxychains4"
 ```
+### 后记
+2019年，70年大庆，使用的`ssr`挂了一大批，目前使用`v2ray`进行科学上网。
+
+`v2ray`的服务端搭建也是专门的脚本的，`windows android macos` 都有好用的第三方具备`GUI`的客户端。
+
+`v2ray`客户端一般自带了`sock5`和 `http`代理。
+
+> ps: `ios`上可以使用`shadowracket`等APP作为`v2ray`客户端
+
+*下面是一些相关资源 ：*
+
+- [v2ray服务端脚本](https://github.com/233boy/v2ray)
+- [v2ray windows 客户端(.net framework 4.6)](https://github.com/2dust/v2rayN)
+- [v2ray macos客户端](https://github.com/yanue/V2rayU)
