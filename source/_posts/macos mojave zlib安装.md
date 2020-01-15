@@ -27,5 +27,10 @@ installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_fo
   ```bash
   xcode-select --install
   ```
+再执行一次
+
+```bash
+installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+```
 
   成功
