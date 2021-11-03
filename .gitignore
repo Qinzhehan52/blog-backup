@@ -4,3 +4,5 @@ db.json
 debug.log
 package.json
 server.log
+*/.DS_Store
+.DS_Store
