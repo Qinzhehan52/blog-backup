@@ -1,0 +1,45 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Set Timezone
+        uses: szenius/set-timezone@v1.2
+        with:
+          timezoneLinux: "Asia/Shanghai"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate site
+        run: |
+          npx hexo clean
+          npx hexo generate
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # 需要在 GitHub 仓库 Settings -> Secrets 中添加 PERSONAL_TOKEN
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: Qinzhehan52/qinzhehan52.github.io
+          publish_branch: master
+          publish_dir: ./public
+          user_name: 'qinzhehan52'
+          user_email: 'qzh0924@hotmail.com'
+          commit_message: ${{ github.event.head_commit.message }}
