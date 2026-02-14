@@ -18,5 +18,8 @@
     "hexo-server": "^0.3.1",
     "install": "^0.12.2",
     "npm": "^11.9.0"
+  },
+  "overrides": {
+    "minimist": "^1.2.8"
   }
 }
