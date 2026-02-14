@@ -2,6 +2,10 @@
 title: macos mojave zlib安装
 date: 2020-01-15 18:43:18
 tags:
+    - macOS
+    - PHP
+categories:
+    - Env Setup
 ---
 
 ## 遇到的问题

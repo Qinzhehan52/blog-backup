@@ -2,7 +2,8 @@
 title: mbp 外接显示器开启HiDPI 
 date: 2018-11-27 14:02:50
 tags:
-    - mac
+    - macOS
+    - HiDPI
 categories:
     - 软件使用
 ---

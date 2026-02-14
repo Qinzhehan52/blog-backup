@@ -2,6 +2,10 @@
 title: daemon守护进程创建
 date: 2019-06-24 15:34:55
 tags:
+    - PHP
+    - Linux
+categories:
+    - Backend
 ---
 
 ## php创建守护进程代码

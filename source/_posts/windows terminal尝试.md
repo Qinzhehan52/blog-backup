@@ -2,6 +2,8 @@
 title: windows terminal尝试
 date: 2019-05-25 18:53:05
 tags:
+    - Windows
+    - Terminal
 categories:
     - 软件使用
 ---

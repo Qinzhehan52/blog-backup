@@ -2,6 +2,10 @@
 title: https 从一次SSL证书验证失败讲起
 date: 2026-02-14 18:15:43
 tags:
+    - HTTPS
+    - SSL
+categories:
+    - Network
 ---
 
 ## 报警响起，但是…?
