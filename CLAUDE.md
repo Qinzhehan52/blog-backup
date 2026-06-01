@@ -24,6 +24,15 @@ npx hexo new "Post Title" # scaffold a new post in source/_posts/
 - **`source/{categories,tags}/`** — index pages for category/tag listings
 - **`.github/workflows/`** — CI/CD: on push to `master`, installs deps, runs `hexo clean && hexo generate`, deploys `./public` to the external GitHub Pages repo using `PERSONAL_TOKEN` secret
 
+## Deployment
+
+The site has two independent deploy targets:
+
+1. **GitHub Pages** (`qinzhehan52.github.io`) — **automatic**. Pushing to `master` runs the GitHub Actions workflow, which builds with the default `_config.yml` and pushes `public/` to the external `Qinzhehan52/qinzhehan52.github.io` repo.
+2. **nerdhan.top** (self-hosted nginx mirror) — **manual**. Run `./deploy-nerdhan.sh`, which builds with a URL override (`--config _config.yml,_config.nerdhan.yml`) and rsyncs `public/` to the server's nginx web root over SSH (host alias `racknerd` in `~/.ssh/config`). GitHub Actions does **not** touch this target, so run the script after any content change you want mirrored there.
+
+`_config.nerdhan.yml` only overrides `url` (to `https://nerdhan.top`) so canonical/sitemap/RSS point at the right domain; the GitHub Pages build keeps using the unmodified `_config.yml`.
+
 ## Post Front-Matter Format
 
 ```yaml

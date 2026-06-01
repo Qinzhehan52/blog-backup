@@ -2,6 +2,7 @@
 .deploy_git/
 public/
 db.json
+_multiconfig.yml
 
 # Dependencies
 node_modules/

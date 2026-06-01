@@ -1,0 +1,5 @@
+# Override config for deploying to the RackNerd box behind nerdhan.top.
+# Merge on top of _config.yml:
+#   npx hexo generate --config _config.yml,_config.nerdhan.yml
+# Only the site URL changes; everything else inherits from _config.yml.
+url: https://nerdhan.top
