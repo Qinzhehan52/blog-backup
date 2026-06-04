@@ -5,15 +5,15 @@
 # Site
 title: SeekRVL 的笔记
 subtitle:
-description:
+description: SeekRVL 的技术笔记，聚焦服务端开发、AI Agent 与工程实践。
 keywords:
 author: SeekRVL
-language:
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://qinzhehan52.github.io
+url: https://qinzhehan52.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -79,3 +79,26 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+# Sitemap (hexo-generator-sitemap)
+sitemap:
+  path: sitemap.xml
+  rel: false
+  tags: true
+  categories: true
+
+# Atom feed (hexo-generator-feed)
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 20
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  autodiscovery: true
+
+# Pretty URLs — drop trailing index.html from canonical/og:url
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
