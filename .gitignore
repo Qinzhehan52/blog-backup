@@ -24,3 +24,6 @@ Thumbs.db
 
 # Claude Code
 .claude/
+
+# nginx configs for nerdhan.top — contains XUI proxy paths/ports, never commit
+nginx/
