@@ -43,3 +43,4 @@ jobs:
           user_name: 'qinzhehan52'
           user_email: 'qzh0924@hotmail.com'
           commit_message: ${{ github.event.head_commit.message }}
+          cname: blog.nerdhan.top
