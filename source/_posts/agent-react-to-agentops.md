@@ -10,7 +10,7 @@ categories:
     - AI
 ---
 
-<img src="/images/agent-react-cover.webp" alt="服务端系统里的 Agent Runtime" width="1672" height="941" loading="eager">
+<img src="/images/agent-react-cover.webp" alt="服务端系统里的 Agent Runtime" width="1672" height="941" loading="eager" style="max-width:100%;height:auto">
 
 最近顺着 AI Agent 这条线做了一轮梳理。
 
@@ -54,7 +54,7 @@ Final Answer: 给出最终答案
 Thought -> Action -> Observation -> Thought -> ... -> Final Answer
 ```
 
-<img src="/images/agent-react-1.webp" alt="图 1：ReAct 最小闭环" width="1672" height="941" loading="lazy">
+<img src="/images/agent-react-1.webp" alt="图 1：ReAct 最小闭环" width="1672" height="941" loading="lazy" style="max-width:100%;height:auto">
 
 模型不再只是一次性生成文本，而是在外部环境反馈中逐步逼近答案。
 
@@ -120,7 +120,7 @@ Agent 之所以成为 Agent，不是因为它会说话，而是因为它能在�
 -> 模型继续推理或给出最终答案
 ```
 
-<img src="/images/agent-react-2.webp" alt="图 2：Agent 调工具的运行时结构" width="1672" height="941" loading="lazy">
+<img src="/images/agent-react-2.webp" alt="图 2：Agent 调工具的运行时结构" width="1672" height="941" loading="lazy" style="max-width:100%;height:auto">
 
 伪代码也很直观：
 
@@ -193,7 +193,7 @@ Function Calling 的价值在于，让模型用稳定、机器可读、schema �
 
 一个是推理-行动范式，一个是工具调用接口协议。
 
-<img src="/images/agent-react-3.webp" alt="图 3：ReAct 与 Function Calling 的层级关系" width="1672" height="941" loading="lazy">
+<img src="/images/agent-react-3.webp" alt="图 3：ReAct 与 Function Calling 的层级关系" width="1672" height="941" loading="lazy" style="max-width:100%;height:auto">
 
 ## 5. LangChain、LangGraph 和多 Agent
 
@@ -234,7 +234,7 @@ LangGraph 负责编排。
 -> 高频稳定流程沉淀为 Workflow / Graph
 ```
 
-<img src="/images/agent-react-4.webp" alt="图 4：从单 Agent 到多 Agent / Workflow 的演进路线" width="1672" height="941" loading="lazy">
+<img src="/images/agent-react-4.webp" alt="图 4：从单 Agent 到多 Agent / Workflow 的演进路线" width="1672" height="941" loading="lazy" style="max-width:100%;height:auto">
 
 Tool 是能力原子。
 
@@ -328,7 +328,7 @@ Agent 是读手册并决定怎么执行的人。
 
 > 面向生产 Agent 的运行、观测、评测和治理能力。
 
-<img src="/images/agent-react-5.webp" alt="图 5：AgentOps 六层控制面" width="1672" height="941" loading="lazy">
+<img src="/images/agent-react-5.webp" alt="图 5：AgentOps 六层控制面" width="1672" height="941" loading="lazy" style="max-width:100%;height:auto">
 
 它不是单个工具，也不是简单的日志平台，而是一组围绕 Agent 生命周期的工程能力。
 
@@ -395,7 +395,7 @@ Agent 也需要类似机制，而且要更细。
 - freeze：出现风险时冻结高危工具或写操作
 - human approval：敏感动作必须人工确认
 
-<img src="/images/agent-react-6.webp" alt="图 6：AgentOps 生命周期" width="1672" height="941" loading="lazy">
+<img src="/images/agent-react-6.webp" alt="图 6：AgentOps 生命周期" width="1672" height="941" loading="lazy" style="max-width:100%;height:auto">
 
 第五层是权限和安全。
 
